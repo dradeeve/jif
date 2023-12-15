@@ -44,7 +44,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">JIF<span>.</span></a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index.php">JIF<span>.</span></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -60,7 +60,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="../login.php" class="get-started-btn scrollto">Login</a>
+      <a href="login.php" class="get-started-btn scrollto">Login</a>
 
     </div>
   </header><!-- End Header -->
@@ -493,7 +493,7 @@
 
                   </div>
                   <div class="member-info">
-                    <h4><?php echo $row["nome"]."testeeeeeeeee"; ?></h4>
+                    <h4><?php echo $row["nome"]; ?></h4>
                     <span>Chief Executive Officer</span>
                   </div>
                 </div>
