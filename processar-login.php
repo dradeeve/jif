@@ -13,11 +13,16 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
 if ($result->num_rows == 1) {
-    session_start(); 
-    $_SESSION["NomeUsuario"] = $row["nome"]; 
+    session_start();
+    $_SESSION["NomeUsuario"] = $row["nome"];
     // Credenciais corretas, redirecione para a página após o login
-    header("Location: index.php");
-    exit();
+    if ($row["usuario_admin"] == 1) {
+        header("Location: admin.php");
+        exit();
+    } else {
+        header("Location: index.php");
+        exit();
+    }
 } else {
     // Credenciais incorretas, exiba uma mensagem de erro ou faça algo similar
     echo "Credenciais incorretas. Por favor, tente novamente.";
